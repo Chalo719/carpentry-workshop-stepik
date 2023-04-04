@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpentry Workshop</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper mob-wrapper">
+            <div class="header__container">
+                <a href="#" class="header__logo">cARpenTry</a>
+
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__li">
+                            <a href="#home" class="header__link">HOME</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#about_us" class="header__link">ABOUT US</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#blog" class="header__link">BLOG</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#works" class="header__link">WORKS</a>
+                        </li>
+                    </ul>
+
+                    <div class="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="home wrapper" id="home">
+            <h1 class="home__title">carpentry workshop</h1>
+        </section>
+
+        <section class="info" id="about_us">
+            <h2 class="title">ABOUT US</h2>
+            <div class="wrapper">
+                <div class="info__container">
+                    <img src="./img/about_us-photo.jpg" alt="about_us__img" class="info__img">
+                    <p class="info__description mob-wrapper">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean
+                        varius
+                        eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim
+                        ac elit eleifend euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                        per inceptos himenaeos. Praesent mattis ultrices est, congue ullamcorper erat bibendum pulvinar.
+                        In accumsan dapibus accumsan. Maecenas semper est ut nunc feugiat, vel ultrices ligula commodo.
+                        Donec eget pulvinar nunc, eget pharetra risus.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog" id="blog">
+            <h2 class="title">BLOG</h2>
+
+            <div class="blog__cards wrapper">
+                <article class="card">
+                    <a href="#blog" class="card__link">
+                        <h3 class="card__title">Furniture construction</h3>
+                        <img src="./img/blog-photo1.jpg" alt="card__img" class="card__img">
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                            varius eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci.
+                            Cras a enim ac elit eleifend euismod.</p>
+                    </a>
+
+                </article>
+                <article class="card">
+                    <a href="#blog" class="card__link">
+                        <h3 class="card__title">Carpentry tools</h3>
+                        <img src="./img/blog-photo2.jpg" alt="card__img" class="card__img">
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                            varius eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci.
+                            Cras a enim ac elit eleifend euismod.</p>
+                    </a>
+                </article>
+                <article class="card">
+                    <a href="#blog" class="card__link">
+                        <h3 class="card__title">Our expirience</h3>
+                        <img src="./img/blog-photo3.jpg" alt="card__img" class="card__img">
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                            varius eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci.
+                            Cras a enim ac elit eleifend euismod.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="info" id="works">
+            <h2 class="title">WORKS</h2>
+            <div class="wrapper">
+                <div class="info__container">
+                    <img src="./img/works-photo.jpg" alt="works__img" class="info__img">
+                    <p class="info__description mob-wrapper">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean
+                        varius
+                        eget arcu quis cursus. Nunc id tortor imperdiet, vestibulum orci sed, gravida orci. Cras a enim
+                        ac elit eleifend euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                        per inceptos himenaeos. Praesent mattis ultrices est, congue ullamcorper erat bibendum pulvinar.
+                        In accumsan dapibus accumsan. Maecenas semper est ut nunc feugiat, vel ultrices ligula commodo.
+                        Donec eget pulvinar nunc, eget pharetra risus.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">© COPYRIGHT 2022</p>
+    </footer>
+
+    <script>
+        function toggleStyles() {
+            burger_menu.classList.toggle("burger-menu-close");
+            menu.classList.toggle("menu-show");
+            document.querySelector("body").classList.toggle("no-scroll");
+        }
+
+        function removeStyles() {
+            burger_menu.classList.remove("burger-menu-close");
+            menu.classList.remove("menu-show");
+            document.querySelector("body").classList.remove("no-scroll");
+        }
+
+        let burger_menu = document.querySelector(".burger-menu");
+        let menu = document.querySelector(".header__list");
+
+        burger_menu.addEventListener("click", () => {
+            toggleStyles();
+
+            let menuLinks = document.getElementsByClassName("header__li");
+            for (let link of menuLinks) {
+                link.addEventListener("click", () => {
+                    removeStyles();
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>
